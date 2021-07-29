@@ -1,5 +1,14 @@
 # How to setup a Docker Container Registry on a Kubernetes cluster
 
+## Install NFS client
+
+If your docker registry deployment is using a NFS-server for storing the repositories you need to install the NFS-client software on each node in the Kubernetes cluster
+
+```
+$ sudo apt update
+$ sudo apt install nfs-common
+```
+
 ## Create a file for basic authnitication (local file on Kubernetes master node)
 
 ```
